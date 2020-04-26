@@ -6,6 +6,8 @@ A pointer is a variable whose value is an address, i.e., the actual value of a p
 Consider the statement: int \*ptr = &var ;<br>
 Here, the variable <strong>ptr</strong> is a pointer, which holds the address of the variable <strong>var</strong> as its value. Deferencing a pointer using \* allows access to the memory location and the corresponding value specified by this address.
 
+[Reference program - pointers_and_references.cpp]
+
 ## Reference
 A reference variable is an alias, i.e., another name for an already existing variable. The variable can therefore be referenced using either the variable name or the reference name.<br><br>
 Consider the statement: int &ref = var ; <br>
