@@ -3,5 +3,5 @@ A pointer is a variable whose value is an address, i.e., the actual value pf a p
 - & : the address operator
 - \* : the dereferencing (indirection) operator
 
-Consider the statement: int *ptr = var;
+Consider the statement: int *ptr = var;<br>
 Here, the variable <strong>ptr</strong> is a pointer, which holds the address of the variable <strong>var</strong> as its value.
