@@ -10,5 +10,5 @@ Here, the variable <strong>ptr</strong> is a pointer, which holds the address of
 ## Reference
 A reference variable is an alias, i.e., another name for an already existing variable. The variable can therefore be referenced using either the variable name or the reference name.<br><br>
 Consider the statement: int &ref = var ; <br>
-Here, the variable <strong>ref</strong> is an alias of the variable <strong>var</strong>, both of which holds the same value.<br>
+Here, the variable <strong>ref</strong> is an alias of the variable <strong>var</strong>, both of which holds the same value.<br><br>
 Unlike pointers, references cannot be changed to refer to other objects after their initialization.
