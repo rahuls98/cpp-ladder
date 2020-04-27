@@ -14,6 +14,7 @@ Here, the variable <strong>ref</strong> is an alias of the variable <strong>var<
 - Unlike pointers, references cannot be changed to refer to other objects after their initialization.
 
 [Reference program - pointers_and_references.cpp]
+[Reference program - pass_by_reference.cpp]
 
 ## Dynamic memory allocation (DMA)
 - Programs may require space according to runtime behaviour. Dynamic allocation of memory can help account for the following cases:
