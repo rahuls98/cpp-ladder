@@ -1,4 +1,4 @@
-## Pointer
+# Pointer
 - A pointer is a variable whose value is an address, i.e., the actual value of a pointer type is an address of memory. While dealing with pointers, the two important operators to be considered are:
   - <strong>&</strong> : the address operator
   - <strong>\*</strong> : the dereferencing (indirection) operator
@@ -7,16 +7,16 @@ Here, the variable <strong>ptr</strong> is a pointer, which holds the address of
 
 [Reference program - pointers_and_references.cpp]
 
-## Reference
+# Reference
 - A reference variable is an alias, i.e., another name for an already existing variable. The variable can therefore be referenced using either the variable name or the reference name.
 - Consider the statement: int &ref = var ; <br>
 Here, the variable <strong>ref</strong> is an alias of the variable <strong>var</strong>, both of which holds the same value.
 - Unlike pointers, references cannot be changed to refer to other objects after their initialization.
 
-[Reference program - pointers_and_references.cpp]
+[Reference program - pointers_and_references.cpp]<br>
 [Reference program - pass_by_reference.cpp]
 
-## Dynamic memory allocation (DMA)
+# Dynamic memory allocation (DMA)
 - Programs may require space according to runtime behaviour. Dynamic allocation of memory can help account for the following cases:
     - size of space required depends on input to program
     - to avoid allocation of very large memory area that may not be required
