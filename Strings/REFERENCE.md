@@ -1,6 +1,14 @@
 ### Element access
-- __at__ : accesses the specified character with bounds checking.
+- __at__ : accesses the specified character with bounds checking
 - __front__: reference to the first character, equivalent to operator[](0)
 - __back__: reference to the last character, equivalent to operator[](size() - 1)
 - __data__: pointer to an array that contains a null-terminated sequence of characters (i.e., a C-string) representing the current value of the string object.
 - **c_str**: pointer to a null-terminated character array with data equivalent to those stored in the string.
+
+### Iterators
+- __begin__: returns a mutable or constant iterator
+- __cbegin__:returns a constant iterator (immutable)
+- __end__, __cend__: returns an iterator to the character following the last character of the string. This character acts as a placeholder, attempting to access it results in undefined behavior.
+- __rbegin__: returns a mutable or constant reverse iterator
+- __crbegin__:returns a constant reverse iterator (immutable)
+- __rend__, __crend__: returns a reverse iterator to the character following the last character of the reversed string. It corresponds to the character preceding the first character of the non-reversed string. This character acts as a placeholder, attempting to access it results in undefined behavior.
