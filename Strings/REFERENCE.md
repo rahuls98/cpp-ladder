@@ -1,6 +1,6 @@
 ### Element access 
 <a href="./elementAccess.cpp">Reference</a>
-- __at__ : accesses the specified character with bounds checking.
+- __at__ : accesses the specified character with bounds checking and returns a reference to the same.
 - __front__: reference to the first character, equivalent to operator[](0).
 - __back__: reference to the last character, equivalent to operator[](size() - 1).
 - __data__: pointer to an array that contains a null-terminated sequence of characters (i.e., a C-string) representing the current value of the string object.
