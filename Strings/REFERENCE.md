@@ -1,5 +1,5 @@
 ### Element access 
-#### \[reference: elementAccess.cpp\]
+<a href="./elementAccess.cpp">Reference</a>
 - __at__ : accesses the specified character with bounds checking.
 - __front__: reference to the first character, equivalent to operator[](0).
 - __back__: reference to the last character, equivalent to operator[](size() - 1).
@@ -9,7 +9,7 @@
 <hr>
 
 ### Iterators
-#### \[reference: iterators.cpp\]
+<a href="./iterators.cpp">Reference</a>
 - __begin__: returns a mutable or constant iterator.
 - __cbegin__:returns a constant iterator (immutable).
 - __end__, __cend__: returns an iterator to the character following the last character of the string. This character acts as a placeholder, attempting to access it results in undefined behavior.
@@ -20,7 +20,7 @@
 <hr>
 
 ### Capacity
-#### \[reference: capacity.cpp\]
+<a href="./capacity.cpp">Reference</a>
 - **max_size**: returns the maximum number of elements the string is able to hold due to system or library implementation limitations.
 - __size__: returns the number of CharT elements in the string.
 - __length__: returns the number of CharT elements in the string.
@@ -29,7 +29,7 @@
 <hr>
 
 ### Operations
-#### \[reference: operations.cpp\]
+<a href="./operations.cpp">Reference</a>
 - __clear__: removes all characters from the string. Equivalent to erase(begin(), end())
 - __erase__: removes specified characters from the string. Takes in the starting position and number of charcaters from there to be deleted.
 - __pop_back__: removes the last character.
