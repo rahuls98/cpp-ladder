@@ -32,3 +32,11 @@ Here the pointer <strong>ptr</strong> holds the address of the newly created blo
 - This allocated heap space must also be released at the end of the program using the <strong>delete</strong> operator. This removes the pointer's reference to the memory location and thereby, the exclusive rights of the program to the same. However, the value at the memory location may still be intact, and the memory location can still be referenced using the address (depending on the Operating System).
 
 <hr>
+
+### Assert
+<a href="./assert.cpp">Reference</a>
+- Assertions are used to check assumptions in the code by making use of logical operations. For example, it can be used to check if the value of a variable is as expected after the execution of a particular code snippet which modifies the variable.
+- An assert is a preprocessor macro that is used to evaluate a conditional expression. If the **assert()** argument results in a 0 (false), then the output is implementation-specific diagnostic information on the standard error output and std::abort is called.
+- If the argument evaluates to 0 (false), then the expression, sourcecode filename, and line number are sent to the standard error, and then abort() function is called.
+- The C++ header <cassert> contains the assert functionality. The assert functionality is mostly used to check if the parameters passed to a function are valid, to check the return value of a function or to check the array bounds among other things.
+- Assertions are checked at runtime. They make debugging efficient, but care should be taken on not to include assertions in the release build of the application. Using **NDEBUG** macro in a program disables all calls to assert. [#define NDEBUG]
