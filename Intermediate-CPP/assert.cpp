@@ -13,8 +13,8 @@ int main() {
 
     a = &p;
 
-    logger(a);
-    logger(b);
+    logger(a); //100
+    logger(b); //Assertion failed: (ptr != NULL), function logger, file assert.cpp, line 6.
 
     return 0;
 }

@@ -1,5 +1,5 @@
 ### Pointer
-<a href="./pointers_and_references.cpp">Reference</a>
+<a href="./pointers_and_references.cpp">Reference 1</a> | <a href="./pointer_example.cpp">Reference 2</a>
 - A pointer is a variable whose value is an address, i.e., the actual value of a pointer type is an address of memory. While dealing with pointers, the two important operators to be considered are:
   - <strong>&</strong> : the address operator
   - <strong>\*</strong> : the dereferencing (indirection) operator

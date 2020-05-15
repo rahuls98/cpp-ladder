@@ -15,10 +15,10 @@ int main(){
     int a1 = 10;
     int a2 = 10;
 
-    log(a1, a2);
+    log(a1, a2); //10 10
     inc1(&a1);
     inc2(a2);
-    log(a1,a2);
+    log(a1,a2); //11 11
 
     return 0;
 }

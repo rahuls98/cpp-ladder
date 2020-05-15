@@ -11,12 +11,12 @@ int main() {
     //pointer creation
     int *ptr = &var;
 
-    log("Variable value: ",var);
-    log("Reference value: ",ref);
-    log("Variable address: ",&var);
-    log("Reference address: ",&ref);
-    log("Pointer value: ",ptr);
-    log("Pointer dereference: ",*ptr);
+    log("Variable value: ",var); //Variable value: 5
+    log("Reference value: ",ref); //Reference value: 5
+    log("Variable address: ",&var); //Variable address: 0x7ffeea609aa8
+    log("Reference address: ",&ref); //Reference address: 0x7ffeea609aa8
+    log("Pointer value: ",ptr); //Pointer value: 0x7ffeea609aa8
+    log("Pointer dereference: ",*ptr); //Pointer dereference: 5
     
     return 0;
 }
