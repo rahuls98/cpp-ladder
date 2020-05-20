@@ -34,5 +34,3 @@
 - __erase__: removes specified characters from the string. Takes in the starting position and number of charcaters from there to be deleted.
 - __pop_back__: removes the last character.
 - __push_back__: appends a character to the end.
-
-<hr>
