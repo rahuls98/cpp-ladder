@@ -14,13 +14,14 @@ int main() {
     s.insert(6, "aaa"); //(index, str)
     log(s); //Exemplaaar
 
-    s.insert(10, " is an example string.", 3, 11); //(index, str, str_index, ch_count)
+    s.insert(10, " is an example string.", 3, 11); //(index, str, str_index, char_count)
     log(s); //Exemplaaar an example
 
-    s.insert(s.cbegin()+s.find_last_of('e')+1, ':'); //(iterator, ch)
+    s.insert(s.cbegin()+s.find_last_of('e')+1, ':'); //(iterator, char)
     log(s); //Exemplaaar an example:
 
-    s.insert(s.cbegin()+s.find_first_of(':')+1, 2, '='); //(iterator, ch_count, ch)
+    s.insert(s.cbegin()+s.find_first_of(':')+1, 2, '='); //(iterator, char_count, char)
     log(s); //Exemplaaar an example:==
+    
     return 0;
 }
