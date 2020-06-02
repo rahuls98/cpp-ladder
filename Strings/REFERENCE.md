@@ -36,3 +36,5 @@
 - __push_back__: appends a character to the end.
 - __replace__: replaces specified portion of a string
 - __insert__: used to insert characters into a string. [<a href="./insert.cpp">Operation reference</a>]
+
+<hr>
