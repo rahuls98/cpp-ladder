@@ -18,5 +18,10 @@ int main() {
         std::cout<<c<<" "; //c c c c c
     }); br();
 
+    v3.assign({'C', '+', '+', '1', '1'});
+    for(char c : v3) {
+        std::cout << c; //C++11
+    }; br();
+
     return 0;
 }
