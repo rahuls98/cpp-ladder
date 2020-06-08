@@ -1,5 +1,7 @@
 #include <iostream>
 
+#define printNode(x) { std::cout<<"[ "<<x<<" ]"<<" --> "; }
+
 class Node {
     public:
         int data;
@@ -11,26 +13,29 @@ class Node {
     }
 };
 
-Node* insertNode(int data, Node* next) {
-    Node* node = new Node(data, next);
-    return node;
+void insertNode(Node* headPtr, int data) {
+    Node* node = new Node(data, NULL);
+    Node* temp = headPtr;
+    
+    while(temp->next != headPtr) temp = temp->next;
+
+    temp->next = node;
+    node->next = headPtr;
 }
 
 int main() {
-    Node *first, *second, *last;
+    Node* head = new Node(1, NULL);
+    head->next = head;
+    insertNode(head, 2);
+    insertNode(head, 3);
 
-    last = insertNode(3, NULL);
-    second = insertNode(2, last);
-    first = insertNode(1, second);
-    last->next = first;
-
-    Node* itr = first;
+    Node* itr = head;
     do{
-        std::cout<<itr->data<<" ";
+        printNode(itr->data);
         itr = itr->next;
-    } while(itr != first); 
+    } while(itr != head); 
 
-    std::cout<<std::endl;
+    std::cout<<"FIRST"<<std::endl;
 
     return 0;
 }

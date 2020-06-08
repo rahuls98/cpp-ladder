@@ -32,18 +32,22 @@ int main() {
     insertNode(head, 3);
 
     Node* ptr = head;
+    int i = 1;
     while(ptr != NULL) {
-        if(ptr->prev == NULL) std::cout<<"PREV: NULL"<<" --- ";
-        else std::cout<<"PREV: "<<ptr->prev->data<<" --- ";
+        std::cout<<"Node "<<i<<": ";
+        
+        if(ptr->prev == NULL) std::cout<<"PREV[ NULL ]"<<" \t<-> ";
+        else std::cout<<"PREV[ "<<ptr->prev->data<<" ] \t<-> ";
 
-        std::cout<<ptr->data<<" --- ";
+        std::cout<<"\tCURR[ "<<ptr->data<<" ] \t<-> ";
 
-        if(ptr->next == NULL) std::cout<<"NEXT: NULL";
-        else std::cout<<"NEXT: "<<ptr->next->data<<" ";
+        if(ptr->next == NULL) std::cout<<"\tNEXT[ NULL ]";
+        else std::cout<<"\tNEXT[ "<<ptr->next->data<<" ] ";
 
         std::cout<<std::endl;
 
         ptr = ptr->next;
+        i += 1;
     }
 
     return 0;
