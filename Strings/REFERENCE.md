@@ -13,7 +13,7 @@
 - __begin__: returns a mutable or constant iterator.
 - __cbegin__:returns a constant iterator (immutable).
 - __end__, __cend__: returns an iterator to the character following the last character of the string. This character acts as a placeholder, attempting to access it results in undefined behavior.
-- __rbegin__: returns a mutable or constant reverse iterator.
+- __rbegin__: returns a mutable or constant reverse iterator. [<a href="./palindrome.cpp">Reference</a>]
 - __crbegin__:returns a constant reverse iterator (immutable).
 - __rend__, __crend__: returns a reverse iterator to the character following the last character of the reversed string. It corresponds to the character preceding the first character of the non-reversed string. This character acts as a placeholder, attempting to access it results in undefined behavior.
 
