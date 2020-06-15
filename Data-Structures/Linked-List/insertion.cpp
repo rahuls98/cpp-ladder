@@ -51,10 +51,10 @@ int main() {
     head->data = 10;
     head->next = NULL;
 
-    print(&head);
-    push(&head, 20); print(&head);
-    append(&head, 30); print(&head);
-    after(&head, 10, 40); print(&head);
+    print(&head);                       // 10
+    push(&head, 20); print(&head);      // 20 10
+    append(&head, 30); print(&head);    // 20 10 30
+    after(&head, 10, 40); print(&head); // 20 10 40 30
 
     return 0;
 }
