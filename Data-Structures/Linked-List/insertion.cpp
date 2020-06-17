@@ -46,6 +46,16 @@ void print(Node** head_ref) {
     std::cout<<std::endl;
 }
 
+void deleteList(Node** head_ptr) {
+    Node* temp = (*head_ptr);
+    Node* curr = temp;
+    while(curr != NULL) {
+        curr = temp->next;
+        delete temp;
+        temp = curr;
+    }
+}
+
 int main() {
     Node* head = new Node();
     head->data = 10;
@@ -56,5 +66,8 @@ int main() {
     append(&head, 30); print(&head);    // 20 10 30
     after(&head, 10, 40); print(&head); // 20 10 40 30
 
+    deleteList(&head);
+    print(&head); // Segmentation fault: 11
+    
     return 0;
 }

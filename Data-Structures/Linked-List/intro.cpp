@@ -22,6 +22,16 @@ void insertNode(Node* headPtr, int data) {
     node->next = NULL;
 }
 
+void deleteList(Node* head_ptr) {
+    Node* temp = head_ptr;
+    Node* curr = temp;
+    while(curr != NULL) {
+        curr = temp->next;
+        delete temp;
+        temp = curr;
+    }
+}
+
 int main() {
     Node* head = new Node(1, NULL);
     insertNode(head, 2);
@@ -30,6 +40,14 @@ int main() {
     Node* itr = head;
     while(itr!=NULL){
         printNode(itr->data);
+        itr = itr->next;
+    } 
+    std::cout<<"NULL"<<std::endl;
+
+    deleteList(head);
+    itr = head;
+    while(itr!=NULL){
+        printNode(itr->data); // Segmentation fault: 11
         itr = itr->next;
     } 
     std::cout<<"NULL"<<std::endl;

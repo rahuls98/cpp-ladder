@@ -30,6 +30,25 @@ void traverse(Node** head_ptr) {
     std::cout<<" }"<<std::endl;
 }
 
+void print(Node** head_ref) {
+    Node* temp = (*head_ref);
+    while(temp != NULL) {
+        std::cout<<temp->data<<" ";
+        temp = temp->next;
+    }
+    std::cout<<std::endl;
+}
+
+void deleteList(Node** head_ptr) {
+    Node* temp = (*head_ptr);
+    Node* curr = temp;
+    while(curr != NULL) {
+        curr = temp->next;
+        delete temp;
+        temp = curr;
+    }
+}
+
 int main() {
     Node* last = new Node(50, NULL);
     Node* sixth = new Node(40, last);
@@ -39,8 +58,10 @@ int main() {
     Node* second = new Node(20, third);
     Node* head = new Node(10, second);
 
-    traverse(&head);
-    std::cout<<"\nFrequency of 20: "<<frequency[20]<<std::endl;
+    traverse(&head); // { 50: 1 40: 1 30: 1 20: 2 10: 2  }
+    std::cout<<"\nFrequency of 20: "<<frequency[20]<<std::endl; // Frequency of 20: 2
+
+    deleteList(&head); print(&head); // Segmentation fault: 11
 
     return 0;
 }
