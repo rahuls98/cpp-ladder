@@ -1,10 +1,7 @@
 #include <iostream>
-#include <unordered_map>
-
-std::unordered_map<void*, bool> visited = {};
 
 class Node {
-public:
+public: 
     int data;
     Node* next;
 
@@ -15,14 +12,14 @@ public:
 };
 
 Node* findLoop(Node** head_ptr) {
-    Node* temp = (*head_ptr);
-    while(temp != NULL) {
-        if(visited[temp]) 
-            return temp;
-        else {
-            visited[temp] = true;
-            temp = temp->next;
-        }  
+    Node *slow, *fast;
+    slow = fast = (*head_ptr);
+
+    while(fast != NULL) {
+        slow = slow->next;
+        fast = fast->next->next;
+        
+        if(slow == fast) return slow;
     }
 
     return NULL;
@@ -37,10 +34,11 @@ int main() {
     last->next = second;
 
     Node* loopNode = findLoop(&head);
+
     if(loopNode == NULL) 
         std::cout<<"No loop in Linked List!"<<std::endl;
     else
-        std::cout<<"Loop begins at node: "<<loopNode<<" with data: "<<loopNode->data<<std::endl;
+        std::cout<<"Loop found in Linked List!"<<std::endl;
 
     delete head;
     delete second;
