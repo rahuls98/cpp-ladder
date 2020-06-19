@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <unordered_map>
 
 std::unordered_map<void*, bool> visited = {};
@@ -15,7 +16,15 @@ public:
 };
 
 Node* findLoop(Node** head_ptr) {
-    
+    Node* temp = (*head_ptr);
+    while(temp != NULL) {
+        if(visited[temp]) 
+            return temp;
+        else {
+            visited[temp] = true;
+            temp = temp->next;
+        }  
+    }
 }
 
 int main() {
@@ -26,5 +35,11 @@ int main() {
 
     last->next = second;
 
-    findLoop(&head);
+    Node* loopNode = findLoop(&head);
+    std::cout<<"Loop begins at node: "<<loopNode<<" with data: "<<loopNode->data<<std::endl;
+
+    delete head;
+    delete second;
+    delete third;
+    delete last;
 }
