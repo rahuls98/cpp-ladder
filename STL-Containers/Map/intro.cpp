@@ -1,8 +1,15 @@
 #include <iostream>
 #include <map>
 
-#define print(container) {for(auto x: container) {std::cout<<x.first<<": "<<x.second<<std::endl;}}
 #define br() {std::cout<<std::endl;}
+
+void print(std::map<int,int> container) {
+    std::cout<<"{ ";
+    for(std::pair<int,int> x: container) {
+        std::cout<<x.first<<": "<<x.second<<", ";
+    }
+    std::cout<<"}";
+}
 
 int main() {
     std::map<int, int> mapper = { {1,1} };
