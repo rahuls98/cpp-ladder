@@ -1,4 +1,5 @@
 #include <iostream>
+#define br() std::cout<<std::endl;
 
 class Node {
 public:
@@ -26,7 +27,7 @@ int main() {
     root->left->left = new Node(4);
     root->left->right = new Node(5);
 
-    preOrder(root);
+    preOrder(root); br();
 
     delete root->left->right;
     delete root->left->left;
