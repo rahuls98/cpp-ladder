@@ -1,5 +1,5 @@
 __Selection sort__ | [<a href="./selectionSort.cpp">Reference</a>]
 
-<br><hr><br>
+<hr>
 
 __Bubble sort__ | [<a href="./bubbleSort.cpp">Reference</a>]
