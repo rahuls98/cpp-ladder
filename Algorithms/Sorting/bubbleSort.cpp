@@ -25,9 +25,9 @@ void bubbleSort(std::vector<int>::iterator start, std::vector<int>::iterator sto
 int main() {
     std::vector<int> v = {64, 34, 25, 12, 22, 11, 90};
 
-    log("Original vector: "); print(v); br();
+    log("Original vector: "); print(v); br();   // Original vector: 64 34 25 12 22 11 90
     bubbleSort(v.begin(), v.end());
-    log("Sorted vector: "); print(v); br();
+    log("Sorted vector: "); print(v); br();     // Sorted vector: 11 12 22 25 34 64 90
 
     return 0;
 }
