@@ -1,12 +1,3 @@
-__Selection sort__ | [<a href="./selectionSort.cpp">Reference</a>]
-- Time Complexity: O(n^2) 
-
-<hr>
-
-__Bubble sort__ | 
-- Time Complexity: O(n^2) 
-
-
 <table>
   <tr>
     <td><strong>Sorting Algorithm </strong></td>
