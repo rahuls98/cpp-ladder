@@ -4,7 +4,7 @@
     <td><strong>Worst case complexity</strong></td>
   <tr>
   <tr>
-    <td>Selection sort [<a href="./selectionSort.cpp">Reference</i></a>]</td>
+    <td>Selection sort [<a href="./selectionSort.cpp">Reference</a>]</td>
     <td>O(n^2)</td>
   <tr>
   <tr>
