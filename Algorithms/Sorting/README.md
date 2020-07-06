@@ -11,4 +11,8 @@
     <td>Bubble sort [<a href="./bubbleSort.cpp"><i>Reference</i></a>]</td>
     <td>O(n^2)</td>
   <tr>
+  <tr>
+    <td>Insertion sort [<a href="./insertionSort.cpp"><i>Reference</i></a>]</td>
+    <td>O(n^2)</td>
+  <tr>
 <table>
