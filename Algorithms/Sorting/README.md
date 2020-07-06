@@ -1,18 +1,5 @@
-<table>
-  <tr>
-    <td><strong>Sorting Algorithm </strong></td>
-    <td><strong>Worst case complexity</strong></td>
-  <tr>
-  <tr>
-    <td>Selection sort [<a href="./selectionSort.cpp"><i>Reference</i></a>]</td>
-    <td>O(n^2)</td>
-  <tr>
-  <tr>
-    <td>Bubble sort [<a href="./bubbleSort.cpp"><i>Reference</i></a>]</td>
-    <td>O(n^2)</td>
-  <tr>
-  <tr>
-    <td>Insertion sort [<a href="./insertionSort.cpp"><i>Reference</i></a>]</td>
-    <td>O(n^2)</td>
-  <tr>
-<table>
+| Sorting Algorithm                                                     | Time complexity (worst case) |
+| :---                                                                  |     :---:                    |
+| Selection sort [<a href="./selectionSort.cpp"><i>Reference</i></a>]   | O(n^2)                       |
+| Bubble sort [<a href="./bubbleSort.cpp"><i>Reference</i></a>]         | O(n^2)                       |
+| Insertion sort [<a href="./insertionSort.cpp"><i>Reference</i></a>]   | O(n^2).                      |
