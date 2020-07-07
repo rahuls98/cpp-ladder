@@ -40,3 +40,8 @@ Here the pointer <strong>ptr</strong> holds the address of the newly created blo
 - If the argument evaluates to 0 (false), then the expression, sourcecode filename, and line number are sent to the standard error, and then abort() function is called.
 - The C++ header <cassert> contains the assert functionality. The assert functionality is mostly used to check if the parameters passed to a function are valid, to check the return value of a function or to check the array bounds among other things.
 - Assertions are checked at runtime. They make debugging efficient, but care should be taken on not to include assertions in the release build of the application. Using **NDEBUG** macro in a program disables all calls to assert. [#define NDEBUG]
+  
+<hr>
+
+### Template
+<a href="./templates.cpp">Reference</a>
