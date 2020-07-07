@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdarg>
 
 template<typename T, int N>
 class Array {
