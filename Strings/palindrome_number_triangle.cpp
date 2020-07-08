@@ -1,3 +1,21 @@
+'''
+
+--Input--
+5
+
+--Output-- 
+5
+454
+34543
+2345432
+123454321
+2345432
+34543
+454
+5
+
+'''
+
 #include <iostream>
 #include <string>
 #define log(x) {std::cout<<x<<std::endl;}
