@@ -7,9 +7,7 @@ public:
     Node* left = NULL;
     Node* right = NULL;
 
-    Node(int data) {
-        this->data = data;
-    }
+    Node(int data) { this->data = data; }
 };
 
 void preOrder(Node* ptr) {
