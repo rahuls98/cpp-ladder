@@ -2,8 +2,6 @@
 #include <queue>
 #include <stack>
 
-#define br() { std::cout<<std::endl; }
-
 class Node {
 public:
     int data;
@@ -52,7 +50,8 @@ int main() {
     insertNode(root, 4);
     insertNode(root, 5);
 
-    inOrder(root); br();
+    inOrder(root);
+    std::cout<<std::endl;
 
     delete root->left->right;
     delete root->left->left;
