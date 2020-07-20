@@ -45,3 +45,5 @@ Here the pointer <strong>ptr</strong> holds the address of the newly created blo
 
 ### Template
 <a href="./templates.cpp">Reference</a>
+
+<hr>
