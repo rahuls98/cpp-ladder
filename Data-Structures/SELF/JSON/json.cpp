@@ -6,6 +6,11 @@
 
 #define br() {std::cout<<std::endl;}
 
+#define STRING std::any_cast<std::string>
+#define CHAR std::any_cast<char>
+#define INT std::any_cast<int>
+#define DOUBLE std::any_cast<double>
+
 class JSON {
     std::vector< std::pair<std::any, std::any> > JSON_Obj;
     std::unordered_map<std::string, int> hashString = {
@@ -19,10 +24,10 @@ class JSON {
         std::string key = std::string(val.type().name());
         int c = hashString[key];
         switch( c ) {
-            case 0 : std::cout<<std::any_cast<std::string>(val); break;
-            case 1 : std::cout<<std::any_cast<char>(val); break;
-            case 2 : std::cout<<std::any_cast<int>(val); break;
-            case 3 : std::cout<<std::any_cast<double>(val); break;
+            case 0 : std::cout<<STRING(val); break;
+            case 1 : std::cout<<CHAR(val); break;
+            case 2 : std::cout<<INT(val); break;
+            case 3 : std::cout<<DOUBLE(val); break;
             default: std::cout<<"Unknown type"; break;
         }
         return;
@@ -48,7 +53,7 @@ public:
 
     void operator[](std::string ind) {
         for(auto &p: JSON_Obj) {
-            std::string key = std::any_cast<std::string>(p.first);
+            std::string key = STRING(p.first);
             if(key == ind) {
                 printCasted(p.second);
             }
@@ -57,7 +62,7 @@ public:
 
     auto getValue(std::string ind) {
         for(auto &p: JSON_Obj) {
-            std::string key = std::any_cast<std::string>(p.first);
+            std::string key = STRING(p.first);
             if(key == ind) {
                 return &(p.second);
             }
@@ -89,7 +94,7 @@ int main() {
 
     br();
 
-    double cgpa = std::any_cast<double>(*(usn_188.getValue("CGPA")));
+    double cgpa = DOUBLE(*(usn_188.getValue("CGPA")));
     std::cout<<"CGPA: "<<cgpa; br();    // CGPA: 8.19
 
     br(); return 0;
