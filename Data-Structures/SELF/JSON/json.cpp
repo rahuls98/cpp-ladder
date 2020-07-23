@@ -47,13 +47,21 @@ public:
     }
 
     void operator[](std::string ind) {
-        for(auto p: JSON_Obj) {
+        for(auto &p: JSON_Obj) {
             std::string key = std::any_cast<std::string>(p.first);
             if(key == ind) {
                 printCasted(p.second);
-                return;
             }
         } 
+    }
+
+    auto getValue(std::string ind) {
+        for(auto &p: JSON_Obj) {
+            std::string key = std::any_cast<std::string>(p.first);
+            if(key == ind) {
+                return &(p.second);
+            }
+        }
     }
 };
 
@@ -78,7 +86,11 @@ int main() {
     usn_188["Name"]; br();      // Rahul
     usn_188["Age"]; br();       // 21
     usn_188["Gender"]; br();    // M
-    usn_188["CGPA"]; br();      // 8.19
+
+    br();
+
+    double cgpa = std::any_cast<double>(*(usn_188.getValue("CGPA")));
+    std::cout<<"CGPA: "<<cgpa; br();    // CGPA: 8.19
 
     br(); return 0;
 }
