@@ -11,8 +11,8 @@
 #define INT std::any_cast<int>
 #define DOUBLE std::any_cast<double>
 
-class JSON {
-    std::vector< std::pair<std::any, std::any> > JSON_Obj;
+class CPPON {
+    std::vector< std::pair<std::any, std::any> > CPPON_Obj;
     std::unordered_map<std::string, int> hashString = {
         {"NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE", 0},
         {"c", 1},
@@ -34,16 +34,16 @@ class JSON {
     }
 
 public:
-    JSON() { this->JSON_Obj = {}; }
+    CPPON() { this->CPPON_Obj = {}; }
 
     template<typename kT, typename vT>
     void insert(kT key, vT value) {
         std::pair<kT,vT> p = std::make_pair(key,value);
-        JSON_Obj.push_back(p);
+        CPPON_Obj.push_back(p);
     }
 
     void print() {
-        for(auto p: JSON_Obj) {
+        for(auto p: CPPON_Obj) {
             printCasted(p.first);
             std::cout<<": ";
             printCasted(p.second);
@@ -52,7 +52,7 @@ public:
     }
 
     void operator[](std::string ind) {
-        for(auto &p: JSON_Obj) {
+        for(auto &p: CPPON_Obj) {
             std::string key = STRING(p.first);
             if(key == ind) {
                 printCasted(p.second);
@@ -61,7 +61,7 @@ public:
     }
 
     auto getValue(std::string ind) {
-        for(auto &p: JSON_Obj) {
+        for(auto &p: CPPON_Obj) {
             std::string key = STRING(p.first);
             if(key == ind) {
                 return &(p.second);
@@ -71,7 +71,7 @@ public:
 };
 
 int main() {
-    JSON usn_188;
+    CPPON usn_188;
 
     usn_188.insert(std::string("Name"), std::string("Rahul"));
     usn_188.insert(std::string("Age"), 21);
