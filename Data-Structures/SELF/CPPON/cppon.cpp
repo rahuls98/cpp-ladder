@@ -56,8 +56,10 @@ public:
             std::string key = STRING(p.first);
             if(key == ind) {
                 printCasted(p.second);
+                return;
             }
         } 
+        std::cout<<"No such key!"<<std::endl;
     }
 
     auto getValue(std::string ind) {
@@ -65,6 +67,16 @@ public:
             std::string key = STRING(p.first);
             if(key == ind) {
                 return &(p.second);
+            }
+        }
+    }
+
+    void remove(std::string ind) {
+        for(auto p=CPPON_Obj.begin(); p!=CPPON_Obj.end(); p++) {
+            std::string key = STRING(p->first);
+            if(key == ind) {
+                CPPON_Obj.erase(p);
+                return;
             }
         }
     }
@@ -96,6 +108,17 @@ int main() {
 
     double cgpa = DOUBLE(*(usn_188.getValue("CGPA")));
     std::cout<<"CGPA: "<<cgpa; br();    // CGPA: 8.19
+
+    usn_188.remove("Gender"); br();
+
+    usn_188.print(); br();
+    /*
+        Name: Rahul
+        Age: 21
+        CGPA: 8.19
+    */
+
+    usn_188["Gender"];  // No such key!
 
     br(); return 0;
 }
