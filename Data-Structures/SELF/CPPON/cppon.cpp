@@ -80,6 +80,17 @@ public:
             }
         }
     }
+
+    template<typename vT>
+    void update(std::string ind, vT val) {
+        for(auto p=CPPON_Obj.begin(); p!=CPPON_Obj.end(); p++) {
+            std::string key = STRING(p->first);
+            if(key == ind) {
+                p->second = val;
+                return;
+            }
+        }
+    }
 };
 
 int main() {
@@ -88,7 +99,7 @@ int main() {
     usn_188.insert(std::string("Name"), std::string("Rahul"));
     usn_188.insert(std::string("Age"), 21);
     usn_188.insert(std::string("Gender"), 'M');
-    usn_188.insert(std::string("CGPA"), 8.19);
+    usn_188.insert(std::string("CGPA"), 8.17);
     br();
 
     usn_188.print();
@@ -96,7 +107,7 @@ int main() {
         Name: Rahul
         Age: 21
         Gender: M
-        CGPA: 8.19
+        CGPA: 8.17
     */
     br();
 
@@ -107,9 +118,10 @@ int main() {
     br();
 
     double cgpa = DOUBLE(*(usn_188.getValue("CGPA")));
-    std::cout<<"CGPA: "<<cgpa; br();    // CGPA: 8.19
+    std::cout<<"CGPA: "<<cgpa; br();    // CGPA: 8.17
 
-    usn_188.remove("Gender"); br();
+    usn_188.remove("Gender"); 
+    usn_188.update("CGPA", 8.19); br();
 
     usn_188.print(); br();
     /*
