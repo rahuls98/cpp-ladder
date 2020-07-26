@@ -47,3 +47,10 @@ Here the pointer <strong>ptr</strong> holds the address of the newly created blo
 <a href="./templates.cpp">Reference</a>
 
 <hr>
+
+### Args
+<a href="./args.cpp">Reference</a>
+- In C++, there is a need to specify the number of parameters a function accepts (in the function definition). However, using different methods it is also possible to enable a function to accept variable number of parameters for different function calls.
+- One such method is to use a templated function and a vector container, to pass arguments of any type to a function, without having to specify the number of parameters and their types in the function definition.
+
+<hr>
